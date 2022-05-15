@@ -72,50 +72,50 @@ export class Movie{
         this.title = title;
     }
 
-    setReleaseYear( releaseYear: number ){
+    setReleaseYear( releaseYear: number ): void{
         this.releaseYear = releaseYear;
     }
 
-    setActors( actors: Professional[] ){
+    setActors( actors: Professional[] ): void{
         this.actors = actors;
     }
 
-    setNationality( nationality: string ){
+    setNationality( nationality: string ): void{
         this.nationality = nationality;
     }
 
-    setDirector( director: Professional ){
+    setDirector( director: Professional ): void{
         this.director = director;
     }
 
-    setWriter( writer: Professional ){
+    setWriter( writer: Professional ): void{
         this.writer = writer;
     }
 
-    setLanguage( language: string ){
+    setLanguage( language: string ): void{
         this.language = language;
     }
 
-    setPlatarform( plataform: string ){
+    setPlatarform( plataform: string ): void{
         this.plataform = plataform;
     }
 
-    setIsMCU( isMcu: boolean ){
+    setIsMCU( isMcu: boolean ): void{
         this.isMCU = isMcu;
     }
 
-    setMainCharacterName( mainCharacter: Professional ){
+    setMainCharacterName( mainCharacter: Professional ): void{
         this.mainCharacterName = mainCharacter;
     }
 
-    setProducer( producer: Professional ){
+    setProducer( producer: Professional ): void{
         this.producer = producer;
     }
 
-    setDistributor( distributor: string){
+    setDistributor( distributor: string): void{
         this.distributor = distributor;
     }
-    setGenre( genre: string ){
+    setGenre( genre: string ): void{
         this.genre = genre;
     }
 
