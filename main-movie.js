@@ -11,7 +11,7 @@ exports.movie1.setLanguage('Inglés');
 exports.movie1.setPlatarform('HBO');
 exports.movie1.setIsMCU(false);
 exports.movie1.setDistributor('Caramelo Studio');
-exports.movie1.printInfo();
+// movie1.printInfo();
 // movie2
 exports.movie2 = new clase_professional_1.Movie('El gato volador', 2015, 'Republica Checa', 'Acción');
 exports.movie2.setActors(main_professional_1.actores2);
@@ -21,4 +21,4 @@ exports.movie2.setLanguage('Español');
 exports.movie2.setPlatarform('Netflix');
 exports.movie2.setIsMCU(true);
 exports.movie2.setDistributor('Camello Studio');
-exports.movie2.printInfo();
+// movie2.printInfo();

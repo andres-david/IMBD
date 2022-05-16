@@ -11,7 +11,7 @@ movie1.setLanguage('Inglés');
 movie1.setPlatarform('HBO');
 movie1.setIsMCU(false);
 movie1.setDistributor('Caramelo Studio');
-movie1.printInfo();
+// movie1.printInfo();
 
 // movie2
 
@@ -24,6 +24,6 @@ movie2.setLanguage('Español');
 movie2.setPlatarform('Netflix');
 movie2.setIsMCU(true);
 movie2.setDistributor('Camello Studio');
-movie2.printInfo();
+// movie2.printInfo();
 
 
