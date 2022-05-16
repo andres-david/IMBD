@@ -1,4 +1,4 @@
-import { Movie } from "./clase-professional";
+import { Movie } from "./clases";
 import { actores, actores2, director, directorM2, mainCharacter, mainCharacter2, producer, producerM2, writer, writerM2 } from "./main-professional";
 
 

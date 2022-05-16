@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
-exports.Imdb = exports.Movie = exports.Professional = void 0;
+exports.Imdb = exports.Movie2 = exports.Movie = exports.Professional = void 0;
+var fs = require('fs-extra');
 var Professional = /** @class */ (function () {
     function Professional(name, age, genre, weight, height, hairColor, eyeColor, race, isRetired, nationality, oscarNumber, profession) {
         this.name = name;
@@ -74,10 +75,28 @@ var Movie = /** @class */ (function () {
     return Movie;
 }());
 exports.Movie = Movie;
+var Movie2 = /** @class */ (function () {
+    function Movie2() {
+    }
+    Movie2.prototype.printInfo = function () {
+        console.log("Title: ".concat(this.title, "\n        ReleaseYear: ").concat(this.releaseYear, "\n        Actors: ").concat(this.actors, "\n        Nacionality: ").concat(this.nationality, "\n        Director: ").concat(this.director, "\n        Write: ").concat(this.language, "\n        Language: ").concat(this.plataform, "\n        Plataform: ").concat(this.plataform, "\n        IsMCU: ").concat(this.isMCU, "\n        Main Character Name: ").concat(this.mainCharacterName, "\n        Producer: ").concat(this.producer, "\n        Distributor: ").concat(this.distributor, "\n        Genre: ").concat(this.genre, "\n        "));
+    };
+    return Movie2;
+}());
+exports.Movie2 = Movie2;
 var Imdb = /** @class */ (function () {
     function Imdb(movies) {
         this.movies = movies;
     }
+    Imdb.prototype.escribirEnFicheroJS = function (fichero) {
+        var moviesJSON = JSON.stringify(this.movies);
+        fs.outputFileSync(fichero, moviesJSON);
+    };
+    Imdb.prototype.obtenerInstanciaIMDB = function (nombreFichero) {
+        var data = fs.readFileSync(nombreFichero, 'utf8');
+        var imbd2 = JSON.parse(data);
+        return imbd2;
+    };
     return Imdb;
 }());
 exports.Imdb = Imdb;

@@ -1,3 +1,5 @@
+const fs = require('fs-extra');
+
 
 export class Professional {
     public name       : string;
@@ -139,11 +141,65 @@ export class Movie{
 
 }
 
+export class Movie2{
+    public title            : string;
+    public releaseYear      : number;
+    public actors           : string;
+    public nationality      : string;
+    public director         : string;
+    public writer           : string;
+    public language         : string;
+    public plataform        : string;
+    public isMCU            : boolean;
+    public mainCharacterName: string;
+    public producer         : string;
+    public distributor      : string;
+    public genre            : string;
+
+    constructor(){}
+
+    printInfo(): void{
+        console.log(`Title: ${this.title}
+        ReleaseYear: ${this.releaseYear}
+        Actors: ${this.actors}
+        Nacionality: ${this.nationality}
+        Director: ${this.director}
+        Write: ${this.language}
+        Language: ${this.plataform}
+        Plataform: ${this.plataform}
+        IsMCU: ${this.isMCU}
+        Main Character Name: ${this.mainCharacterName}
+        Producer: ${this.producer}
+        Distributor: ${this.distributor}
+        Genre: ${this.genre}
+        `)
+    }
+    
+
+}
+
 
 export class Imdb{
     public movies: Movie[];
 
     constructor(movies: Movie[]){
         this.movies = movies;
+    }
+
+    escribirEnFicheroJS(fichero: string): void{
+
+        let moviesJSON: string = JSON.stringify(this.movies);
+
+        fs.outputFileSync(fichero, moviesJSON);
+
+    }
+
+    obtenerInstanciaIMDB(nombreFichero: string): Imdb{
+
+        const data = fs.readFileSync(nombreFichero, 'utf8');
+
+        let imbd2: Imdb = JSON.parse(data);
+
+        return imbd2;
     }
 }

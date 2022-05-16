@@ -1,4 +1,4 @@
-import { Professional } from './clase-professional';
+import { Professional } from './clases';
 
 
 
