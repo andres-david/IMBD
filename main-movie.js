@@ -1,2 +1,24 @@
 "use strict";
 exports.__esModule = true;
+exports.movie2 = exports.movie1 = void 0;
+var clase_professional_1 = require("./clase-professional");
+var main_professional_1 = require("./main-professional");
+exports.movie1 = new clase_professional_1.Movie('inception', 2010, 'Estados Unidos', 'suspenso');
+exports.movie1.setActors(main_professional_1.actores);
+exports.movie1.setDirector(main_professional_1.director);
+exports.movie1.setWriter(main_professional_1.writer);
+exports.movie1.setLanguage('Inglés');
+exports.movie1.setPlatarform('HBO');
+exports.movie1.setIsMCU(false);
+exports.movie1.setDistributor('Caramelo Studio');
+exports.movie1.printInfo();
+// movie2
+exports.movie2 = new clase_professional_1.Movie('El gato volador', 2015, 'Republica Checa', 'Acción');
+exports.movie2.setActors(main_professional_1.actores2);
+exports.movie2.setDirector(main_professional_1.directorM2);
+exports.movie2.setWriter(main_professional_1.writerM2);
+exports.movie2.setLanguage('Español');
+exports.movie2.setPlatarform('Netflix');
+exports.movie2.setIsMCU(true);
+exports.movie2.setDistributor('Camello Studio');
+exports.movie2.printInfo();
